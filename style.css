@@ -177,6 +177,10 @@ iframe {
         font-size: 15px;
     }
 
+    #search {
+        font-size: 25px;
+    }
+
     .episode-count {
         display: inline-block;
     }
