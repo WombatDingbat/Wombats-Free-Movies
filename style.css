@@ -202,13 +202,17 @@ iframe {
 }
 
 .seasons {
-    display: flex;
+    display: grid;
     float: left;
     position: absolute;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     margin-right: auto;
     margin-left: 40%;
+    column-gap: 30px;
+    row-gap: 50px;
+    grid-template-columns: 260px 260px 260px;
+    overflow: auto;
 }
 
 @media (max-width:800px){
@@ -239,6 +243,13 @@ iframe {
         font-size: 15px;
     }
 
+    .season-bg {
+        background-image: url("thumbnails/walkingdead.jpg");
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+    }
+
     #search {
         font-size: 25px;
     }
@@ -267,11 +278,17 @@ iframe {
     }
     
     .seasons {
-        display: flex;
+        display: grid;
         float: left;
-        height: 100vh;
+        height: 417;
         width: 100%;
         margin-right: auto;
-        margin-left: 10%;
+        margin-left: 0%;
+        background: rgba(31, 31, 31, 0.7);
+        column-gap: 30px;
+        row-gap: 50px;
+        grid-template-columns: 260px 260px;
+        overflow: auto;
+        padding-bottom: 200px;
     }
 }
