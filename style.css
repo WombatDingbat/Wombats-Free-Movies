@@ -3,10 +3,15 @@
 body {
     margin: 0px;
     background: #131312;
+    height: 100vh;
+    overflow: hidden;
+
 }
+
 header {
     background: #1f1f1f;
     padding: 15px;
+    z-index: 9999;
 }
 
 h1 {
@@ -130,8 +135,23 @@ iframe {
     scale: 1.1;
 }
 
+.season-thumbnail {
+    margin-left: 30px;
+    margin-top: 30px;
+    width: 230px;
+    height: 310px;
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+.season-thumbnail:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
 .thumbnail {
     width: 230px;
+    border-radius: 20px;
 }
 
 .dimmer {
@@ -150,13 +170,52 @@ iframe {
     width: 230px;
     z-index: 2;
     height: 140px;
+    border-radius: 0 0 20px 20px;
 }
 
 .episode-count {
     display: inline-block;
 }
 
+#seasons-background {
+    max-width: 550px;
+    height: 100vh;
+    float: left;
+}
+
+.dimmer2 {
+    position: absolute;
+    width: 100%;
+    max-width: 550px;
+    height: 100vh;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(19,19,18,1) 100%);
+    z-index: 10;
+}
+
+
+.bg {
+    display: flex;
+    float: left;
+    max-width: max-content;
+    max-width: fit-content;
+}
+
+.seasons {
+    display: flex;
+    float: left;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    margin-right: auto;
+    margin-left: 40%;
+}
+
 @media (max-width:800px){
+    body {
+        overflow: hidden;
+    }
+    
     h1 {
         font-size: 15px;
     }
@@ -183,5 +242,25 @@ iframe {
 
     .episode-count {
         display: inline-block;
+    }
+
+    .dimmer2 {
+        position: absolute;
+        width: 100%;
+        max-width: 431px;
+        height: 100vh;
+        background: rgb(0,0,0);
+        background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(19,19,18,1) 100%);
+        z-index: 10;
+    }
+    
+    .seasons {
+        display: flex;
+        float: left;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        margin-right: auto;
+        margin-left: 60%;
     }
 }

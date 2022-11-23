@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>The Walking Dead</title>
+</head>
+<body>
+    <header>
+        <h1 onclick="home()">Wombats Free Movies</h1></header>
+    </header>
+    <main>
+        <div class="bg">
+            <img id="seasons-background" src="thumbnails/walkingdead.jpg" alt="">
+            <div class="dimmer2"></div>
+        </div>
+        <div class="seasons">
+            <div class="season-thumbnail" onclick="season2()">
+                <div class="dimmer" style="height: 240px;"></div>
+                <div class="info" style="height: 100px; margin-top: 240px;" >
+                    <h2>The Walking Dead</h2>
+                    <p>Season: 2</p>
+                </div>
+                <img class="thumbnail" style="max-height: 310px;" src="thumbnails/Walking_Dead_S2_Poster.jpg" alt="">
+            </div>
+        </div>
+    </main>
+    <script>
+        function home() {
+            location.href = 'index.html';
+        }
+        function season2() {
+            location.href = 'Walking-Dead.html'
+        }
+    </script>
+</body>
+</html>
