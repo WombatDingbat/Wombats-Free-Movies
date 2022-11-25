@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <title>The Walking Dead</title>
+</head>
+<body style="overflow: auto;">
+    <header>
+        <h1 onclick="home()">Wombats Free Movies</h1>
+        <p class="episode-count"><p>The Walking Dead,</p><p>Season 3</p><p>Episode:</p><p id="counter"></p></p>
+    </header>
+    <main>
+        <iframe id="video" frameborder="0" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true"></iframe>
+        <button class="next" onclick="seasons()" style="border-radius:5px; float: left;"><-Back</button>
+        <button class="back" onclick="back()"><-Previous Episode</button>
+        <button class="next" onclick="forward()">Next Episode-></button>
+    </main>
+    <script>
+        function home() {
+            location.href = 'index.html';
+        }
+        var episode_count = window.onload = localStorage.getItem("storageName");
+        console.log(episode_count)
+        const episodes = ["https://moplay.org/watch?v=gAAAAABjgIwiRydxSfzLrbeFOLNSvaZxh4R1QmoXLLPjYWe2e-aqaROr06ihQEb-v9UFWnD2-5ZzkJ0QfCLCgccn2FqjPQ0k3nlXVaNhBGJdhcxvu7yi1UVZt30JS3KAPIYVd6uEQ3J_A2FoD5_5uXQM936ZhMpv7Q==", "https://moplay.org/watch?v=gAAAAABjgIxR1TcLx8HSfentvwk_kRTxQR6Sz0VyC0JTMgDPVrbfVdklKxuuYKoTa8fgvCIGgCUZXRlGHstxb6kEdSo0ifxEkqFxU-un06ZJYQfPJQX8c59KAIZBx2k-LG9KnybMWOT58vknJsDKT2WG8YnBHDlVDA==", "https://moplay.org/watch?v=gAAAAABjgIxirGJ8dsw7c36D3RkQ8X7YjRqVk_LnlZ_LPeDmvhXrO21aFFPJUU4jmVLMsdBJLGTP4tcJs0HN5v8EtijK8L3r4WC1Nn6J_kUZAgOgCNkq1VLCwHRptgYOPnn9XG1Nnz5qht3ZrNKAmqf2bLCrwE_hDA==", "https://moplay.org/watch?v=gAAAAABjgIyBrkx_3xcRegsscYqKST9jNJYfZ8EalPsDmwc4rYYB-9C3Ahot4P28BO9eARP52S2Ans7FcaZAFgJ-Mc_5a04QYV5IeNcgVmkBrCxT4sJz-HilvytNGEIjI_28gllJrDebj-OK44zlcWOGQ1mlNdk8RA==", "https://moplay.org/watch?v=gAAAAABjgIyQqH-YPpCBX1eBrx38b6u6V0WXdf0GEwYlvUlkartSKhnDKGEi-6_uHIEyEDK4_rYJjckhi1kd8UZefcZJK9ZHkUERUQmj4cVQ9NmRAu5W-LwlPyEqQo1MPKyN9dfDbWH0Rya9eBf-be2Z2a62HqcSQQ==", "https://moplay.org/watch?v=gAAAAABjgIygsC_uG6jmDygiib-vRJ27SSLZmU1f_EvY9gVF6UGxFtAzmSu2xfwdidmSaK2BfKBa3xjjSAQq9dwBkEdm1Xwwk2FpcP2lXecREacJePd2onIhJPFZWWJmHSMeEGY_y8rEdO8G6tsGUcWOIlGNUnLrOw==", "https://moplay.org/watch?v=gAAAAABjgIygsC_uG6jmDygiib-vRJ27SSLZmU1f_EvY9gVF6UGxFtAzmSu2xfwdidmSaK2BfKBa3xjjSAQq9dwBkEdm1Xwwk2FpcP2lXecREacJePd2onIhJPFZWWJmHSMeEGY_y8rEdO8G6tsGUcWOIlGNUnLrOw==", "https://moplay.org/watch?v=gAAAAABjgIzBeX_GWHzEK9sutc4D-s1Cje4BrLKSoBIZVO_0wf0lvkLTnuFx4B98RZ_DmuNs6duVSaKR75KBfEY0F0b6TpaiLMTs332ypeSRMv_bCrwO6G14KrxLYoRrW-jy21CR-IOyD9idTtn-MBXE61nLjx5Hkg==", "https://moplay.org/watch?v=gAAAAABjgIzT_SKlR6yeDZ-aP8ogO23ZRdX4Xeff4LN1lrj_b8VmXQ58vuHnrKulMoKocJ0jw4Q23rYkOJVpJeMoETqUZrxs4llhw0kTzbr_yWVfVMMuKWVSfPBuP0m0bMHzNgZpzmClSw3Qu15IqwlszH5ft2NK7g==", "https://moplay.org/watch?v=gAAAAABjgIzmZ_aKn0Sw93b9Z2GSJJKbEGX5PXQBpEvOZlaXn4nHHnLJMcAkIyQYbTaeb_e94ui0vSpzp1PU5wOTt-uwkk5e00y_bxi5x7je4nTVKQUsONQd6CI40CZ_lbTkSRpVUsY4FD37Tibbwr1QsJjTtW5fgQ==", "https://moplay.org/watch?v=gAAAAABjgIz3tBpYxgRpQYk-jF9POwqYEw0j98tX5Ja9h1IzX8DEX57SCzon3iJ5xxlYxfi3ChzaZXEWrI0V5jkLzjm688XExmsytdblXV3wJQOv8gIoMoGCwEKt-_ANeGevrE8iyfKT3hJYiB58WxiJm02wraRMkg=="];
+        var episode_counter = episode_count + 1;
+
+        document.getElementById('video').src = episodes[episode_count];
+        document.getElementById('counter').innerText = episode_counter;
+
+        function forward() {
+            if (episode_count == 9) {
+                episode_count = 9;
+                document.getElementById('video').src = episodes[episode_count];
+            }
+            else {
+                episode_count += 1;
+                episode_counter = episode_count + 1;
+                document.getElementById('counter').innerText = episode_counter;
+                document.getElementById('video').src = episodes[episode_count];
+            }
+            
+        }
+
+        function back() {
+            if (episode_count == 0) {
+                episode_count = 0;
+                document.getElementById('video').src = episodes[episode_count];
+            }
+            else {
+                episode_count  -= 1;
+                episode_counter = episode_count + 1;
+                document.getElementById('counter').innerText = episode_counter;
+                document.getElementById('video').src = episodes[episode_count];
+            }
+        }
+
+        function seasons() {
+            location.href = 'walking-dead-seasons.html';
+        }
+    </script>
+</body>
+</html>

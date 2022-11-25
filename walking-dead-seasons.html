@@ -18,15 +18,31 @@
             <div class="dimmer2"></div>
         </div>
         <div class="seasons">
-            <div class="season-thumbnail" onclick="season2()">
-                <div class="dimmer" style="height: 240px;"></div>
+            <div id="season-thumb" class="season-thumbnail">
+                <div id="episodes-link-episodes" class="dimmer3">
+                    <p id="episode" class="episode-link-episode">Episodes</p><br>
+                    <p onclick="ep1()" id="episode1" class="episode-link-episode">1</p>
+                    <p onclick="ep2()" id="episode2" class="episode-link-episode">2</p>
+                    <p onclick="ep3()" id="episode3" class="episode-link-episode">3</p>
+                    <p onclick="ep4()" id="episode4" class="episode-link-episode">4</p>
+                    <p onclick="ep5()" id="episode5" class="episode-link-episode">5</p>
+                    <p onclick="ep6()" id="episode6" class="episode-link-episode">6</p>
+                    <p onclick="ep7()" id="episode7" class="episode-link-episode">7</p>
+                    <p onclick="ep8()" id="episode8" class="episode-link-episode">8</p>
+                    <p onclick="ep9()" id="episode9" class="episode-link-episode">9</p>
+                    <p onclick="ep10()" id="episode10" class="episode-link-episode">10</p>
+                    <p onclick="ep11()" id="episode11" class="episode-link-episode">11</p>
+                    <p onclick="ep12()" id="episode12" class="episode-link-episode">12</p>
+                    <p onclick="ep13()" id="episode13" class="episode-link-episode">13</p>
+                </div>
+                <div id="dimmer" class="dimmer" style="height: 240px;" onclick=""></div>
                 <div class="info" style="height: 100px; margin-top: 240px;" >
                     <h2>The Walking Dead</h2>
-                    <p>Season: 2</p>
+                    <p>Season: 2</p><br>
                 </div>
                 <img class="thumbnail" style="max-height: 310px;" src="thumbnails/Walking_Dead_S2_Poster.jpg" alt="">
             </div>
-            <div class="season-thumbnail" onclick="season2()">
+            <div class="season-thumbnail" onclick="season3()">
                 <div class="dimmer" style="height: 240px;"></div>
                 <div class="info" style="height: 100px; margin-top: 240px;" >
                     <h2>The Walking Dead</h2>
@@ -74,6 +90,119 @@
         }
         function season2() {
             location.href = 'Walking-Dead.html'
+        }
+
+        document.getElementById("season-thumb").addEventListener("mouseover", mouseOver);
+        document.getElementById("season-thumb").addEventListener("mouseout", mouseOut);
+
+        function mouseOver() {
+            console.log("test")
+            document.getElementById("dimmer").style.height = "0px";
+            document.getElementById("episodes-link-episodes").style.height = "310px";
+            document.getElementById("episode").style.visibility = "visible";
+            document.getElementById("episode1").style.visibility = "visible";
+            document.getElementById("episode2").style.visibility = "visible";
+            document.getElementById("episode3").style.visibility = "visible";
+            document.getElementById("episode4").style.visibility = "visible";
+            document.getElementById("episode5").style.visibility = "visible";
+            document.getElementById("episode6").style.visibility = "visible";
+            document.getElementById("episode7").style.visibility = "visible";
+            document.getElementById("episode8").style.visibility = "visible";
+            document.getElementById("episode9").style.visibility = "visible";
+            document.getElementById("episode10").style.visibility = "visible";
+            document.getElementById("episode11").style.visibility = "visible";
+            document.getElementById("episode12").style.visibility = "visible";
+            document.getElementById("episode13").style.visibility = "visible";
+            
+        }
+        function mouseOut() {
+            document.getElementById("episodes-link-episodes").style.height = "0px";
+            document.getElementById("episode").style.visibility = "hidden";
+            document.getElementById("episode").style.visibility = "hidden";
+            document.getElementById("episode1").style.visibility = "hidden";
+            document.getElementById("episode2").style.visibility = "hidden";
+            document.getElementById("episode3").style.visibility = "hidden";
+            document.getElementById("episode4").style.visibility = "hidden";
+            document.getElementById("episode5").style.visibility = "hidden";
+            document.getElementById("episode6").style.visibility = "hidden";
+            document.getElementById("episode7").style.visibility = "hidden";
+            document.getElementById("episode8").style.visibility = "hidden";
+            document.getElementById("episode9").style.visibility = "hidden";
+            document.getElementById("episode10").style.visibility = "hidden";
+            document.getElementById("episode11").style.visibility = "hidden";
+            document.getElementById("episode12").style.visibility = "hidden";
+            document.getElementById("episode13").style.visibility = "hidden";
+            document.getElementById("dimmer").style.height = "240px";
+        }
+
+        function ep1() {
+            location.href = 'Walking-Dead.html'
+            episode_count = 0;
+            localStorage.setItem("storageName",episode_count);
+        }
+        function ep1() {
+            location.href = 'Walking-Dead.html'
+            episode_count = 1;
+            localStorage.setItem("storageName",episode_count);
+        }
+        function ep3() {
+            location.href = 'Walking-Dead.html'
+            episode_count = 2;
+            localStorage.setItem("storageName",episode_count);
+        }
+        function ep4() {
+            location.href = 'Walking-Dead.html'
+            episode_count = 3;
+            localStorage.setItem("storageName",episode_count);
+        }
+        function ep5() {
+            location.href = 'Walking-Dead.html'
+            episode_count = 4;
+            localStorage.setItem("storageName",episode_count);
+        }
+        function ep6() {
+            location.href = 'Walking-Dead.html'
+            episode_count = 5;
+            localStorage.setItem("storageName",episode_count);
+        }
+        function ep7() {
+            location.href = 'Walking-Dead.html'
+            episode_count = 6;
+            localStorage.setItem("storageName",episode_count);
+        }
+        function ep8() {
+            location.href = 'Walking-Dead.html'
+            episode_count = 7;
+            localStorage.setItem("storageName",episode_count);
+        }
+        function ep9() {
+            location.href = 'Walking-Dead.html'
+            episode_count = 8;
+            localStorage.setItem("storageName",episode_count);
+        }
+        function ep10() {
+            location.href = 'Walking-Dead.html'
+            episode_count = 9;
+            localStorage.setItem("storageName",episode_count);
+        }
+        function ep11() {
+            location.href = 'Walking-Dead.html'
+            episode_count = 10;
+            localStorage.setItem("storageName",episode_count);
+        }
+        function ep12() {
+            location.href = 'Walking-Dead.html'
+            episode_count = 11;
+            localStorage.setItem("storageName",episode_count);
+        }
+        function ep13() {
+            location.href = 'Walking-Dead.html'
+            episode_count = 12;
+            localStorage.setItem("storageName",episode_count);
+        }
+
+        function season3() {
+            location.href = 'Walking-Dead-s3.html'
         }
     </script>
 </body>

@@ -144,8 +144,7 @@ iframe {
     transition: 0.2s;
 }
 
-.season-thumbnail:hover {
-    cursor: pointer;
+.season-thumbnail:hover{
     scale: 1.1;
 }
 
@@ -161,7 +160,10 @@ iframe {
     width: 230px;
     position: absolute;
     z-index: 1;
+    transition: 0.2s;
 }
+
+
 
 .info {
     position: absolute;
@@ -171,6 +173,10 @@ iframe {
     z-index: 2;
     height: 140px;
     border-radius: 0 0 20px 20px;
+}
+
+.info:hover {
+    height: 200px;
 }
 
 .episode-count {
@@ -193,6 +199,33 @@ iframe {
     z-index: 10;
 }
 
+.dimmer3 {
+    text-align: center;
+    position: absolute;
+    width: 230px;
+    height: 0px;
+    background: rgba(19,19,18,0.7);
+    transition: 0.2s;
+}
+
+.episode-link {
+    margin: 0px;
+    margin-left: 20px;
+    visibility: hidden;
+    transition: 0.2s;
+}
+
+.episode-link-episode {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    visibility: hidden;
+    transition: 0.2s;
+}
+
+.episode-link-episode:hover {
+    cursor: pointer;
+}
 
 .bg {
     display: flex;
