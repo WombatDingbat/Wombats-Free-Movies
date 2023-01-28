@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 body {
-    background-image: url("/images/shows/bg/the-incredible-hulk.webp");
+    background-image: url("images/shows/bg/the-incredible-hulk.webp");
     background-size: cover;
     background-position: 0px -100px;
     overflow: hidden;
